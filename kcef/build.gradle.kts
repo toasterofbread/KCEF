@@ -10,7 +10,7 @@ plugins {
     id("org.jetbrains.dokka")
 }
 
-val ktorVersion = "2.3.10"
+val ktorVersion = "3.0.0-beta-2"
 
 dependencies {
     api(project(":jcef"))

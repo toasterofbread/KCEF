@@ -107,6 +107,9 @@ internal data object PackageDownloader {
             println("Used package: $it")
         }) {
             onDownload { bytesSentTotal, contentLength ->
+                if (contentLength == null) {
+                    return@onDownload
+                }
                 progress.downloading((bytesSentTotal.toFloat() / contentLength.toFloat()) * 100F)
             }
         }.execute { httpResponse ->
