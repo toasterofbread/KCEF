@@ -5,7 +5,7 @@ plugins {
     id("org.jetbrains.dokka")
     id("com.vanniktech.maven.publish")
     id("maven-publish")
-    id("signing")
+//    id("signing")
 }
 
 dependencies {
@@ -17,7 +17,7 @@ dependencies {
 
 mavenPublishing {
     publishToMavenCentral(host = SonatypeHost.S01, automaticRelease = true)
-    signAllPublications()
+//    signAllPublications()
     coordinates("dev.datlag", "jcef", "2024.04.20.1")
 
     pom {

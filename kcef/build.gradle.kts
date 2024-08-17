@@ -6,7 +6,7 @@ plugins {
     kotlin("plugin.serialization")
     id("com.vanniktech.maven.publish")
     id("maven-publish")
-    id("signing")
+//    id("signing")
     id("org.jetbrains.dokka")
 }
 
@@ -34,7 +34,7 @@ tasks.dokkaHtmlPartial {
 
 mavenPublishing {
     publishToMavenCentral(host = SonatypeHost.S01, automaticRelease = true)
-    signAllPublications()
+//    signAllPublications()
     coordinates("dev.datlag", "kcef", "2024.04.20.1")
 
     pom {
